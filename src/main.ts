@@ -28,7 +28,20 @@ clicker.addEventListener("click", () => {
   update();
 });
 
-app.append(heading, image, message, counterElem, clicker);
+let autoCoinAmount = 0;
+const upgrade = document.createElement("button");
+upgrade.textContent = "Upgrade";
+upgrade.addEventListener("click", () => {
+  autoCoinAmount++;
+  update();
+});
+
+app.append(heading, image, message, counterElem, clicker, upgrade);
+
+setInterval(() => {
+  counter += autoCoinAmount;
+  update();
+}, 1000);
 
 function update() {
   counterElem.textContent = `Coins: ${counter}`;
