@@ -21,6 +21,10 @@ let counter = 0;
 const counterElem = document.createElement("p");
 counterElem.textContent = `Coins: ${counter}`;
 
+let growth = 0;
+const growthElem = document.createElement("p");
+growthElem.textContent = `Growth: ${growth} coins/sec`;
+
 const clicker = document.createElement("button");
 clicker.textContent = "Click Me!";
 clicker.addEventListener("click", () => {
@@ -28,21 +32,21 @@ clicker.addEventListener("click", () => {
   update();
 });
 
-let autoCoinAmount = 0;
 const upgrade = document.createElement("button");
 upgrade.textContent = "Upgrade";
 upgrade.addEventListener("click", () => {
-  autoCoinAmount++;
+  growth++;
   update();
 });
 
-app.append(heading, image, message, counterElem, clicker, upgrade);
+app.append(heading, image, message, counterElem, growthElem, clicker, upgrade);
 
 setInterval(() => {
-  counter += autoCoinAmount;
+  counter += growth;
   update();
 }, 1000);
 
 function update() {
   counterElem.textContent = `Coins: ${counter}`;
+  growthElem.textContent = `Growth: ${growth} coins/sec`;
 }
