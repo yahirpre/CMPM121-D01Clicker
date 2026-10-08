@@ -1,3 +1,11 @@
 body {
   font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  display: grid;
+  place-items: center;
 }
