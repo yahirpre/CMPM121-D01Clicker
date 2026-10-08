@@ -6,7 +6,7 @@ import tileUrl from "./assets/tile.svg?no-inline";
 const app = document.querySelector<HTMLElement>("#app")!;
 
 const heading = document.createElement("h1");
-heading.textContent = "D1 project";
+heading.textContent = "ClickerMon";
 
 const image = document.createElement("img");
 image.src = tileUrl;
@@ -17,7 +17,19 @@ image.height = 96;
 const message = document.createElement("p");
 message.textContent = "Your project starts here.";
 
+let counter = 0;
+const counterElem = document.createElement("p");
+counterElem.textContent = `Coins: ${counter}`;
+
 const clicker = document.createElement("button");
 clicker.textContent = "Click Me!";
+clicker.addEventListener("click", () => {
+  counter++;
+  update();
+});
 
-app.append(heading, image, message, clicker);
+app.append(heading, image, message, counterElem, clicker);
+
+function update() {
+  counterElem.textContent = `Coins: ${counter}`;
+}
