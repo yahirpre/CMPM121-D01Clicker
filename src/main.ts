@@ -33,13 +33,37 @@ clicker.addEventListener("click", () => {
 });
 
 const upgrade = document.createElement("button");
-upgrade.textContent = "Upgrade";
+upgrade.textContent = "Growth +1";
 upgrade.addEventListener("click", () => {
   growth++;
   update();
 });
 
-app.append(heading, image, message, counterElem, growthElem, clicker, upgrade);
+const upgrade2 = document.createElement("button");
+upgrade2.textContent = "Growth +2";
+upgrade2.addEventListener("click", () => {
+  growth += 2;
+  update();
+});
+
+const upgrade3 = document.createElement("button");
+upgrade3.textContent = "Growth +3";
+upgrade3.addEventListener("click", () => {
+  growth += 3;
+  update();
+});
+
+app.append(
+  heading,
+  image,
+  message,
+  counterElem,
+  growthElem,
+  clicker,
+  upgrade,
+  upgrade2,
+  upgrade3,
+);
 
 setInterval(() => {
   counter += growth;

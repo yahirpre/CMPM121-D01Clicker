@@ -3,6 +3,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("https://i.pinimg.com/originals/ac/0b/a0/ac0ba0a9bc7e7cd02e81ec71e193d344.png?nii=t");
+  background-size: cover;
 }
 
 #app {
