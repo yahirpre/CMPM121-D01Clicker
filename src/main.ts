@@ -34,6 +34,7 @@ pokeballImage.width = 96;
 pokeballImage.height = 96;
 pokeballImage.addEventListener("click", () => {
   coins += coinsPerClick;
+  pokeballImage.style = "transform: scale(0.95);";
   update();
 });
 pokeballImage.addEventListener("mousedown", () => {
@@ -232,6 +233,7 @@ function update() {
     const upgradebutton = upgradeButtons[index];
     const affordable = coins >= upgrade.cost;
     //change button color
+
     upgradebutton.classList.toggle(
       "upgrade-purchasable",
       affordable,
