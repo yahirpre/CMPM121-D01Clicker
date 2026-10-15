@@ -1,0 +1,34 @@
+# CLICKERMON
+
+ClickerMon is a browser clicker game based on Pokemon that features Charmander, Charmeleon, and Charizard as useful upgrades to increase flow of coins.
+
+# GITHUB REPOSITORY
+
+https://github.com/yahirpre/CMPM121-D01Clicker
+
+# LIVE APP
+
+https://yahirpre.github.io/CMPM121-D01Clicker/
+
+# IMPORTANT FILES
+
+style.css -- Stylesheet
+src/main.ts -- Where the game logic code exists
+src/assets -- Asset files containing sprites used
+index.html -- HTML file containing information regarding display organization and element IDs
+
+# MEANINGFUL REVISIONS
+
+HTML/CSS DISPLAY ORGANIZATION AND STYLE
+structured the display to be centered with a more refined style compared to the default css options
+
+REFACTORING
+avoided repetitive or redundant code by implementing loops and functions where necessary
+some important functions include...
+
+    createTextElement() --  returns an HTMLElement containing text, including <p>, <h1>, <h2>,...
+    createUpgradeButton() --  uses the upgrades object array to create buttons, descriptions, and event listeners based on those objects
+    update()  --  updates the text with the newly calculated data. gets called after state changes such as coins incrementing or player clicks
+
+DOM UPGRADE SYSTEM
+used objects and object arrays to hold date regarding upgrades instead of repetitive code holding the same name, description, cost, costIncreaseFactor, and effect variables
